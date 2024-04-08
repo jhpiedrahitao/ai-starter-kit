@@ -73,8 +73,8 @@ def main():
         st.session_state.chat_history = []
     if "tools" not in st.session_state:
         st.session_state.tools = {
-            #"llm-ask": True,
-            "serpapi": True,
+            "conversational_query": True,
+            "search_engine": True,
             "llm-math": True    
             }
     if "max_iterations" not in st.session_state:
@@ -96,9 +96,9 @@ def main():
         
         st.markdown("Tools Available for the agent to use")
         
-        #tools["llm-ask"] = st.toggle('LLM_reasoning', True)
-        st.session_state.tools["serpapi"] = st.toggle('Calculator', True)
-        st.session_state.tools["llm-math"] = st.toggle('Google_Search', True)
+        st.session_state.tools["conversational_query"] = st.toggle('LLM_reasoning', True)
+        st.session_state.tools["search_engine"] = st.toggle('Google_Search', True)
+        st.session_state.tools["llm-math"] = st.toggle('Calculator', True)
         
         st.markdown("Max Agent iterations")
         st.session_state.max_iterations=st.number_input("set a number", value=4)     

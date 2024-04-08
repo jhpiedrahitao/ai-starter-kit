@@ -1,7 +1,10 @@
 api: "sambaverse"
 
 llm: 
-    "temperature": 0.1
+    "temperature": 0.01
     "max_tokens_to_generate": 500
     "sambaverse_model_name": "Meta/llama-2-70b-chat-hf"
     "sambaverse_select_expert": "llama-2-70b-chat-hf"
+
+tools:
+    "search_tool": "serper" # serper, serpapi, openserp 
